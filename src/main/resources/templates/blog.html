@@ -42,6 +42,8 @@
             <th scope="col">№</th>
             <th scope="col">Subject</th>
             <th scope="col">Time</th>
+            <th scope="col">Links</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -49,6 +51,16 @@
             <td th:text="${s.id}"></td>
             <td th:text="${s.title}"></td>
             <td th:text="${s.content}"></td>
+            <td>
+                <a th:href="${s.link}" class="btn btn-outline-primary">
+                    Zoom
+                </a>
+            </td>
+            <td>
+                <a th:href="${s.link}" class="btn btn-outline-success">
+                    Classroom
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>

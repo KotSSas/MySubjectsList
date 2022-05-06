@@ -16,14 +16,24 @@ public class Tue {
     private String title;
     @Column(name = "content", nullable = false)
     private String content;
-
+    @Column(name = "link")
+    private String link;
     public Tue() {
     }
 
-    public Tue(String title, String content) {
-        this.setId(id);
-        this.setTitle(title);
-        this.setContent(content);
+
+    public Tue(String title, String content, String link) {
+        this.title = title;
+        this.content = content;
+        this.link = link;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public Long getId() {

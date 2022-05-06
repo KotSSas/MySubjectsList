@@ -25,6 +25,7 @@ public class FriController {
     public Fri create(@RequestBody Map<String, String> body){
         String title = body.get("title");
         String content = body.get("content");
-        return repo.save(new Fri(title,content));
+        String link = body.get("link");
+        return repo.save(new Fri(title,content,link));
     }
 }

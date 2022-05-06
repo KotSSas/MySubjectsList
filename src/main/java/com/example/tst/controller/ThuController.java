@@ -25,6 +25,7 @@ public class ThuController {
     public Thu create(@RequestBody Map<String, String> body){
         String title = body.get("title");
         String content = body.get("content");
-        return repo.save(new Thu(title,content));
+        String l = body.get("link");
+        return repo.save(new Thu(title,content,l));
     }
 }

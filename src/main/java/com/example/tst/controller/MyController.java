@@ -29,6 +29,7 @@ public class MyController {
     public MyUser create(@RequestBody Map<String, String> body){
         String title = body.get("title");
         String content = body.get("content");
-        return myRepository.save(new MyUser(title,content));
+        String l = body.get("content");
+        return myRepository.save(new MyUser(title,content,l));
     }
 }
