@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface WednesdayRepository extends JpaRepository<Wed, Long> {
-    public abstract List<Wed> findByTitleContainingOrContentContaining(String text, String textAgain);
+List<Wed> findByTitleContainingOrContentContaining(String text, String textAgain);
 
 }

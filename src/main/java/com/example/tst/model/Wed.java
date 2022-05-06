@@ -7,7 +7,10 @@ import javax.persistence.*;
 
         @UniqueConstraint(columnNames = "id"),
         @UniqueConstraint(columnNames = "title"),
-        @UniqueConstraint(columnNames = "content")})
+        @UniqueConstraint(columnNames = "content"),
+        @UniqueConstraint(columnNames = "link")
+
+})
 public class Wed {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,14 +19,25 @@ public class Wed {
     private String title;
     @Column(name = "content", nullable = false)
     private String content;
+    @Column(name = "link")
+    private String link;
 
     public Wed() {
     }
 
-    public Wed(String title, String content) {
+    public Wed(String title, String content, String link) {
         this.setId(id);
         this.setTitle(title);
         this.setContent(content);
+        this.setLink(link);
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public Long getId() {
@@ -50,12 +64,4 @@ public class Wed {
         this.content = content;
     }
 
-    @Override
-    public String toString() {
-        return "Tuesday{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
 }

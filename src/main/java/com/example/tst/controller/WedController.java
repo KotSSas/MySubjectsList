@@ -25,6 +25,7 @@ public class WedController {
     public Wed create(@RequestBody Map<String, String> body){
         String title = body.get("title");
         String content = body.get("content");
-        return repo.save(new Wed(title,content));
+        String link = body.get("link");
+        return repo.save(new Wed(title,content,link));
     }
 }
