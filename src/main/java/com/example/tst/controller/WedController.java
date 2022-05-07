@@ -26,6 +26,7 @@ public class WedController {
         String title = body.get("title");
         String content = body.get("content");
         String link = body.get("link");
-        return repo.save(new Wed(title,content,link));
+        String c = body.get("clink");
+        return repo.save(new Wed(title,content,link,c));
     }
 }

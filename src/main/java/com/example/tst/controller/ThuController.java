@@ -17,7 +17,7 @@ public class ThuController {
     @Autowired
     private ThursdayRepository repo;
     @GetMapping("/thu")
-    public String  tuesd(Model model){
+    public String thursday(Model model){
         model.addAttribute("thu", repo.findAll());
         return "thu";
     }
@@ -26,6 +26,7 @@ public class ThuController {
         String title = body.get("title");
         String content = body.get("content");
         String l = body.get("link");
-        return repo.save(new Thu(title,content,l));
+        String cls = body.get("clink");
+        return repo.save(new Thu(title,content,l,cls));
     }
 }

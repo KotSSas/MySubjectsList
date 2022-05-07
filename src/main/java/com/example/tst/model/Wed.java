@@ -21,15 +21,24 @@ public class Wed {
     private String content;
     @Column(name = "link")
     private String link;
-
+    @Column(name = "clink")
+    private String clink;
     public Wed() {
     }
 
-    public Wed(String title, String content, String link) {
-        this.setId(id);
-        this.setTitle(title);
-        this.setContent(content);
-        this.setLink(link);
+    public Wed(String title, String content, String link, String clink) {
+        this.title = title;
+        this.content = content;
+        this.link = link;
+        this.clink = clink;
+    }
+
+    public String getClink() {
+        return clink;
+    }
+
+    public void setClink(String clink) {
+        this.clink = clink;
     }
 
     public String getLink() {

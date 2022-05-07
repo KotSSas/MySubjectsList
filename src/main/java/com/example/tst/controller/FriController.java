@@ -26,6 +26,7 @@ public class FriController {
         String title = body.get("title");
         String content = body.get("content");
         String link = body.get("link");
-        return repo.save(new Fri(title,content,link));
+        String c = body.get("clink");
+        return repo.save(new Fri(title,content,link,c));
     }
 }

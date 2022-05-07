@@ -30,6 +30,7 @@ public class MyController {
         String title = body.get("title");
         String content = body.get("content");
         String l = body.get("content");
-        return myRepository.save(new MyUser(title,content,l));
+        String c = body.get("clink");
+        return myRepository.save(new MyUser(title,content,l,c));
     }
 }
