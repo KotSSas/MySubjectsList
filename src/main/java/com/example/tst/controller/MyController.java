@@ -5,6 +5,8 @@ import com.example.tst.model.MyUser;
 import com.example.tst.repository.MyRepository;
 import com.example.tst.repository.TuesdayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
 @Controller
 public class MyController {
     @Autowired
