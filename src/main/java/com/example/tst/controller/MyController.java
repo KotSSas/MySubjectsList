@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
 @Controller
 public class MyController {
     @Autowired
