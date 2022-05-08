@@ -23,14 +23,28 @@ public class Wed {
     private String link;
     @Column(name = "clink")
     private String clink;
+    @Column(name = "used")
+    private String used;
+
+
+
     public Wed() {
     }
 
-    public Wed(String title, String content, String link, String clink) {
+    public Wed(String title, String content, String link, String clink, String used) {
         this.title = title;
         this.content = content;
         this.link = link;
         this.clink = clink;
+        this.used = used;
+    }
+
+    public String getUsed() {
+        return used;
+    }
+
+    public void setUsed(String used) {
+        this.used = used;
     }
 
     public String getClink() {

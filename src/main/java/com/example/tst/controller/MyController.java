@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -26,13 +27,13 @@ public class MyController {
         return "blog";
     }
 
-
     @PostMapping("/blog")
     public MyUser create(@RequestBody Map<String, String> body){
         String title = body.get("title");
         String content = body.get("content");
         String l = body.get("content");
         String c = body.get("clink");
-        return myRepository.save(new MyUser(title,content,l,c));
+        String used = body.get("used");
+        return myRepository.save(new MyUser(title,content,l,c,used));
     }
 }

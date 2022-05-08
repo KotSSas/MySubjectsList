@@ -27,6 +27,7 @@ public class ThuController {
         String content = body.get("content");
         String l = body.get("link");
         String cls = body.get("clink");
-        return repo.save(new Thu(title,content,l,cls));
+        String u = body.get("used");
+        return repo.save(new Thu(title,content,l,cls,u));
     }
 }

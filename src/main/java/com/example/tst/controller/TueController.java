@@ -27,6 +27,7 @@ public class TueController {
         String content = body.get("content");
         String l = body.get("link");
         String c = body.get("clink");
-        return repo.save(new Tue(title,content,l,c));
+        String u = body.get("used");
+        return repo.save(new Tue(title,content,l,c,u));
     }
 }

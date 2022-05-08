@@ -46,6 +46,7 @@
             <th scope="col">Time</th>
             <th scope="col">Links</th>
             <th scope="col"></th>
+            <th scope="col">Lesson:</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +63,11 @@
                 <a th:href="${w.clink}" class="btn btn-outline-success">
                     Classroom
                 </a>
+            </td>
+            <td>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" th:title="${w.used}">
+                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Is there a need to join?</button>
+                 </span>
             </td>
         </tr>
         </tbody>
