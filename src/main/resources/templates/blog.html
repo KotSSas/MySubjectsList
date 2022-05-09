@@ -13,7 +13,7 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" th:href="@{/today}">Subject Base🏫</a>
+        <a class="navbar-brand" th:href="@{/today}">Subject Management Sys🏫</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -44,7 +44,7 @@
             <th scope="col">Time</th>
             <th scope="col">Links</th>
             <th scope="col"></th>
-            <th scope="col">Lesson:</th>
+            <th scope="col">Is there a need to join:</th>
         </tr>
         </thead>
         <tbody>
@@ -63,8 +63,8 @@
                 </a>
             </td>
             <td>
-                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" th:title="${s.used}">
-                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Is there a need to join?</button>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" >
+                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled th:text="${s.used}"></button>
                  </span>
             </td>
         </tr>
