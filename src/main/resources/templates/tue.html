@@ -14,7 +14,7 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand"  th:href="@{/today}">Subject Management Sys🏫</a>
+        <a class="navbar-brand" th:href="@{/today}">Subject Management Sys🏫</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -65,8 +65,9 @@
                 </a>
             </td>
             <td>
-                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" >
-                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled th:text="${tues.used}"></button>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip">
+                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled
+                        th:text="${tues.used}"></button>
                  </span>
             </td>
         </tr>
@@ -76,11 +77,121 @@
         <div class="container">
             <h1 class="display-4">Playlist for today</h1>
             <p class="lead">This is a playlist for Tuesday.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2AxwYfiTSU9xox6HluBbR8?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/2AxwYfiTSU9xox6HluBbR8?utm_source=generator"
+                    width="100%" height="80" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
         </div>
     </div>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Books online</h4>
+        <p>Below you can find some links for online books which will be useful thoughout online classes.</p>
+        <hr>
+        <p class="mb-0">Maybe I forgot something, so that I'm really sorry.</p>
+    </div>
+
+    <!--     Algebra -->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Algebra</h5>
+                    <p class="card-text">Algebra online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/algebra/ag-merzlyak-da-nomirovskij-vb-polonskij-ms-yakir-2018-profilnij-riven"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+        <!-- Geometria -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Geometry</h5>
+                    <p class="card-text">Geometry online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/geometriya/ap-yershova-vv-goloborodko-of-krizhanovskij-2018-profilnij-riven"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--     Ukr. Literatura -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ukrainian literature</h5>
+                    <p class="card-text">Ukrainian literature online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/ukrayinska-literatura/ov-slonovska-nv-maftin-nm-vivcharik-2018"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+        <!-- Biologia -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Biology</h5>
+                    <p class="card-text">Biology online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/biologiya/vi-sobol-2018"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Fizika -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Physics</h5>
+                    <p class="card-text">Physics online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/fizika/vg-baryahtar-so-dovgij-fya-bozhinova-2018-riven-standartu"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+        <!--  Ukr. Mova -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ukrainian language</h5>
+                    <p class="card-text">Ukrainian language online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/ukrayinska-mova/om-avramenko-2018"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--  Istoriya Ukraini -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ukrainian history</h5>
+                    <p class="card-text">Ukrainian history online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/istoriya-ukrayini/vs-vlasov-sv-kulchitskij-2018-profilnij-riven"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+        <!--  Vsesvitnia -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Foreign history</h5>
+                    <p class="card-text">Foreign history online book.</p>
+                    <a href="https://vshkole.com/10-klass/uchebniki/vsesvitnya-istoriya/iya-schupak-2018"
+                       class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 </body>
 </html>
