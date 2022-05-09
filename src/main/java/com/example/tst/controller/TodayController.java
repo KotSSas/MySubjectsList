@@ -31,6 +31,8 @@ public class TodayController {
             return "redirect:/thu";
         }else if (format.equals("Fri")) {
             return "redirect:/tue";
+        }else if (format.equals("Sat")||format.equals("Sun")) {
+            return "redirect:/oops";
         }
         return "";
     }
