@@ -21,6 +21,7 @@ public class TodayController {
         Date currentTime = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("E");
         String format = sdf.format(currentTime);
+//        System.out.println(format);
         if (format.equals("Mon")){
             return "redirect:/blog";
         }else if (format.equals("Tue")) {
@@ -30,7 +31,7 @@ public class TodayController {
         }else if (format.equals("Thu")) {
             return "redirect:/thu";
         }else if (format.equals("Fri")) {
-            return "redirect:/tue";
+            return "redirect:/fri";
         }else if (format.equals("Sat")||format.equals("Sun")) {
             return "redirect:/oops";
         }
